@@ -4,6 +4,9 @@ This repo contains exercises for [TypeScript](https://www.typescriptlang.org/), 
 
 **DISCLAIMER: Please treat it as a reference, not as the only source of truth ;)** 
 
+## Setup  
+Run `yarn` or `npm i`
+
 ## Contains following exercises:
 1. **Check index access** - adding a flag to `tsconfig.json` file to restrict accessing properties by index.  
 Supported TypeScript version: `4.1`  
