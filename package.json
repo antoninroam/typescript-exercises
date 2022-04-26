@@ -1,0 +1,26 @@
+{
+  "name": "typescript-exercises",
+  "version": "1.0.0",
+  "description": "Contains examples of advanced TypeScript features",
+  "main": "index.js",
+  "repository": "git@github.com:antoninroam/typescript-exercises.git",
+  "author": "Anton Lebedev <anton.lebedev@weareroam.com>",
+  "license": "none",
+  "private": false,
+  "dependencies": {
+    "@types/react": "^18.0.7",
+    "@types/node": "^16.7.13",
+    "@types/react-dom": "^18.0.0",
+    "eslint": "^8.14.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.6.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}
