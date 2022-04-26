@@ -1,4 +1,5 @@
 // Fix Typescript errors using template string types applied to `Success` and `Error` interfaces
+// Try to make it generic, so any string is accepted, not only `Http` and `Backend` 
 interface Success {
   type: "Success";
   body: string;

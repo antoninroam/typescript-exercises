@@ -28,9 +28,15 @@ Read more about template string types as discriminants [here](https://devblogs.m
 6. **Key remapping** - remapping existing types to new types.  
 Supported TypeScript version: `4.1`  
 Read more about mapped types and key remapping [here](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html)  
-7. **Conditional types** - using conditional types to get prop types from existing components.  
+7. **Generic types** - using generic types to to create properly typed lists.  
+Supported TypeScript version: `2.8`  
+Read more about generic types [here](https://www.typescriptlang.org/docs/handbook/2/generics.html#handbook-content)  
+8. **Flatten types** - creating type to flatten array types using `infer` keyword.  
+Supported TypeScript version: `2.8`  
+Read more about inferring [here](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)  
+9. **Conditional types** - using conditional types to get prop types from existing components.  
 Supported TypeScript version: `2.8`  
 Read more about conditional types [here](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#handbook-content)  
-8. **Recursive conditional types** - extract route parameter type from url string using recursive conditional type.
+10. **Recursive conditional types** - extract route parameter type from url string using recursive conditional type.
 Supported TypeScript version: `3.7`
 Read more about recursive conditional types [here](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#more-recursive-type-aliases)
