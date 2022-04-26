@@ -1,31 +1,52 @@
-const Input: React.FC<{ onChange: () => void, value: string, uniqueFeature: any }> = ({ onChange, value }) => {
-  return (
-    <input onChange={onChange} value={value} />
-  );
+export interface FlatListType<Type> {
+  data: Type[];
+  renderItem: (item: Type) => JSX.Element;
 }
 
-const Button: React.FC<{ onClick: () => void, text: string, amazingFeature: any }> = ({ onClick, text }) => {
-  return (
-    <button onClick={onClick}>{text}</button>
-  );
-}
-
-type PropsType<C> =
-  C extends React.ComponentType<infer P> ? P : never;
-
-interface InputProps extends PropsType<typeof Input> { }
-interface ButtonProps extends PropsType<typeof Button> { }
-
-interface FormProps {
-  inputProps: InputProps;
-  buttonProps: ButtonProps;
-}
-
-export const Form: React.FC<FormProps> = ({ inputProps, buttonProps }) => {
+const FlatList = <Type extends unknown>({ data, renderItem }: FlatListType<Type>) => {
   return (
     <div>
-      <Input {...inputProps} />
-      <Button {...buttonProps} />
+      {data.map(item => renderItem(item))}
     </div>
-  );
+  )
+}
+
+interface Cat {
+  name: string;
+  meow: () => void;
+}
+
+interface ListOfCatsProps {
+  data: Cat[];
+}
+
+const ListOfCats: React.FC<ListOfCatsProps> = ({ data }) => {
+  return (
+    <FlatList data={data} renderItem={(cat) => (
+      <div>
+        <p>{cat.name}</p>
+        <button onClick={cat.meow}>Meow</button>
+      </div>
+    )} />
+  )
+}
+
+interface Dog {
+  name: string;
+  bark: () => void;
+}
+
+interface ListOfDogsProps {
+  data: Dog[];
+}
+
+const ListOfDogs: React.FC<ListOfDogsProps> = ({ data }) => {
+  return (
+    <FlatList data={data} renderItem={(dog) => (
+      <div>
+        <p>{dog.name}</p>
+        <button onClick={dog.bark}>Bark</button>
+      </div>
+    )} />
+  )
 }
