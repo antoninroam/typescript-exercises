@@ -12,7 +12,7 @@ interface DisplayItemsProps {
 
 // Create a generic Flatten type and use it to replace `UnavailableItemType` with flattened `AvailableListType` type
 // Hint: use conditional type and `infer` keyword in order to get proper type for Array element
-const Item: React.FC<UnavailableItemType> = ({ id, name, quantity }) => {
+const Item: React.FC<{ [k in string]: any }> = ({ id, name, quantity }) => {
   return (
     <div key={id}>
       <p>{name}</p>

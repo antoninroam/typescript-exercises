@@ -7,6 +7,8 @@ This repo contains exercises for [TypeScript](https://www.typescriptlang.org/), 
 ## Setup  
 Run `yarn` or `npm i`
 
+It's recommended to add [Tslint extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin) for VS Code to see TypeScript errors.
+
 ## Contains following exercises:
 1. **Check index access** - adding a flag to `tsconfig.json` file to restrict accessing properties by index.  
 Supported TypeScript version: `4.1`  

@@ -8,8 +8,8 @@
   "license": "none",
   "private": false,
   "dependencies": {
-    "@types/react": "^18.0.7",
     "@types/node": "^16.7.13",
+    "@types/react": "^18.0.7",
     "@types/react-dom": "^18.0.0",
     "eslint": "^8.14.0",
     "react": "^18.0.0",
@@ -22,5 +22,8 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "devDependencies": {
+    "tslint": "^6.1.3"
   }
 }
