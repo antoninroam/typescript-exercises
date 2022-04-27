@@ -1,9 +1,9 @@
 export type ExtractRouteParams<T extends string> =
   string extends T
   ? string
-  : T extends `${infer Start}:${infer Param}/${infer Rest}`
+  : T extends `${string}:${infer Param}/${infer Rest}`
   ? {[k in Param | keyof ExtractRouteParams<Rest>]: string}
-  : T extends `${infer Start}:${infer Param}`
+  : T extends `${string}:${infer Param}`
   ? {[k in Param]: string;}
   : {};
 
