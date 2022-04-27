@@ -11,10 +11,11 @@ interface DisplayItemsProps {
 }
 
 type Flatten<Type> = Type extends Array<infer Item> ? Item : never;
+// OR type Flatten<Type> = Type extends (infer Item)[] ? Item : never; - since 'Array<T>' is forbidden
 
 type FlattenAvailableListType = Flatten<AvailableListType>;
 
-const Item: React.FC<FlattenAvailableListType> = ({ id, name, quantity }) => {
+const RenderItem: React.FC<FlattenAvailableListType> = ({ id, name, quantity }) => {
   return (
     <div key={id}>
       <p>{name}</p>
@@ -27,7 +28,7 @@ export const DisplayItems: React.FC<DisplayItemsProps> = ({ data }) => {
   return (
     <div>
       <h1>Available items:</h1>
-      {data.map(item => <Item {...item} />)}
+      {data.map(item => <RenderItem {...item} />)}
     </div>
   )
 }
